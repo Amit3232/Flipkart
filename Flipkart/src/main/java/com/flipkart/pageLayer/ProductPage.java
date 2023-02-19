@@ -1,5 +1,7 @@
 package com.flipkart.pageLayer;
 
+import java.util.Set;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,8 +24,18 @@ public class ProductPage extends TestBase {
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement continue_button;
 	
-	public void clickOnBuyButton()
+	public void clickOnBuyButton() throws InterruptedException
 	{
+		String parent = driver.getWindowHandle();
+		Set<String> s1 = driver.getWindowHandles();
+		for(String child : s1)
+		{
+			if(!parent.equalsIgnoreCase(child))
+			{
+				Thread.sleep(2000);
+				driver.switchTo().window(child);
+			}
+		}
 		buy_button.click();
 	}
 	

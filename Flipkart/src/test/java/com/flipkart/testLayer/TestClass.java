@@ -7,7 +7,7 @@ import com.flipkart.testBase.TestBase;
 public class TestClass extends TestBase 
 {
 @Test
-	public void buyProduct()
+	public void buyProduct() throws InterruptedException
 	{
 	
 		home.enterProductName("ipad");

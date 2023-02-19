@@ -22,7 +22,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//div[text()=' 9th generation']")
 	private WebElement product_option;
 	
-	@FindBy(xpath="//div[text()='APPLE iPad (10th Gen) 64 GB ROM 10.9 inch with Wi-Fi Only (Pink)']")
+	@FindBy(xpath="//div[text()='APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches with Wi-Fi+5G (Silver)']")
 	private WebElement select_product;
 	
 	public void enterProductName(String name) 
